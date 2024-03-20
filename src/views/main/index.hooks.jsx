@@ -45,7 +45,7 @@ const useIndex = () => {
   const searchActivity = (e) => {
     setLocalData([
       ...localDataSearch.filter((element) =>
-        element?.activity?.includes(e.target.value)
+        element?.activity.toLowerCase()?.includes(e.target.value.toLowerCase())
       ),
     ]);
   };
